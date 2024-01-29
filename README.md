@@ -90,7 +90,12 @@ import ReactDOM  from "react-dom/client";
 remove...code
   "main": "App.js",
 ...code
-
+# step5.b - package.json
+add...code
+  "browserslist":[
+    "last 3 versions"
+  ]
+...code
    
 
 # cdnLinks_React
