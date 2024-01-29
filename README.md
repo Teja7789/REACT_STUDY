@@ -2,10 +2,10 @@
 
 # Step1:
 
-    //npm init
+      npm init
 
 # Step2 packege.json created
-
+```jsx
 packege.json
  package name: (react_study)
 version: (1.0.0)                                                             
@@ -42,15 +42,13 @@ license: (ISC)
   "homepage": "https://github.com/Teja7789/REACT_STUDY#readme"
 }
 
-
 Is this OK? (yes) yes
-
 ...code
-# parcel
+```
 
-# Step3: https://parceljs.org/
+# Step3:Parcel SetUP https://parceljs.org/
 
-    //npm install -D parcel
+      npm install -D parcel
 
 # code  package.json && package-lock.json && node_modules
 
@@ -62,40 +60,53 @@ Is this OK? (yes) yes
 
 # step4:
 
-    //npx parcel index.html
+      npx parcel index.html
 
-    //npm i react
+      npm i react
 
-    //npm i react-dom
+      npm i react-dom
+
+```Jsx
 
 ...code - App.js
 import React from "react";
 import ReactDOM  from "react-dom/client";
 ..code
+```
 
+```Jsx
 ...code -index.html
 <script src="./App.js" type="module"></script>
 ...code
+```
 
+```Jsx
 ...code - package.json
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
 ...code
+```
 
 # step5 - parcel-build
-    //npx parcel build index.html
+      npx parcel build index.html
 # step5.a - pacakage.json 
+
+```Jsx
 remove...code
   "main": "App.js",
 ...code
+```
+
 # step5.b - package.json
+```Jsx
 add...code
   "browserslist":[
     "last 3 versions"
   ]
 ...code
+```
    
 
 # cdnLinks_React
