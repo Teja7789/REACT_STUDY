@@ -1,0 +1,31 @@
+{
+  "name": "react_study",
+  "version": "1.0.0",
+  "description": "This is ReactStudy",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Teja7789/REACT_STUDY.git"
+  },
+  "keywords": [
+    "react",
+    "study"
+  ],
+  "author": "Tej",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Teja7789/REACT_STUDY/issues"
+  },
+  "homepage": "https://github.com/Teja7789/REACT_STUDY#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
