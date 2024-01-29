@@ -86,7 +86,12 @@ import ReactDOM  from "react-dom/client";
 
 # step5 - parcel-build
     //npx parcel build index.html
+# step5.a - pacakage.json 
+remove...code
+  "main": "App.js",
+...code
 
+   
 
 # cdnLinks_React
 module === index.html,index.css& App.js
