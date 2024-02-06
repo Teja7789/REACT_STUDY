@@ -107,7 +107,14 @@ add...code
   ]
 ...code
 ```
-
+# step6 - npm start package.json
+```Jsx
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    ...code
+  }
+```
  # Laying foundation Jsx , babel and componet  
 
 # cdnLinks_React
