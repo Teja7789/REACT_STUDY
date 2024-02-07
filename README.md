@@ -115,6 +115,11 @@ add...code
     ...code
   }
 ```
+## Export types
+```
+export default resList; // one anme in one file ../../utils/constants
+export const HEADER_LOGO; // two names in one file ../../utils/mockData
+```
  # Laying foundation Jsx , babel and componet  
 
 # cdnLinks_React
