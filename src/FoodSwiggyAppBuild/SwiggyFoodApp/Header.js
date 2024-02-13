@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { HEADER_LOGO } from "../../utils/Constants";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [toogleLoginBtn, setToogleLoginBtn] = useState("Login");
+  const navigate = useNavigate();
   return (
     <div className="header">
       <div className="logo-container">
@@ -10,10 +12,9 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
+          <li> <Link  to="/">Home</Link></li>
+          <li><Link  to="/courosel">About Us </Link></li>
+          <li><Link  to="/courosel">Contact Us</Link></li>
           <button
             className="headerBtn"
             onClick={() =>

@@ -120,6 +120,51 @@ add...code
 export default resList; // one anme in one file ../../utils/constants
 export const HEADER_LOGO; // two names in one file ../../utils/mockData
 ```
+
+## Step7 Router setUp -npm i react-router-dom
+```Jsx 
+///...code
+import { RouterProvider, createBrowserRouter ,Outlet} from 'react-router-dom';
+//code...
+//code...
+     <Outlet /> // switch case for child routes
+//code...
+
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element:<Index />,
+    errorElement:<NotFound />, //No route match page
+    children:[  //child routes
+      {
+        path:"/",
+        element:<MainContent />,
+        
+      },
+      {
+        path:"/restaurantCard",
+        element: <RestaurantCard />
+      },
+      {
+        path:"/courosel",
+        element: <Courosel />
+      }
+    ]
+  },
+  {
+    path:"/footer",
+    element:<Footer />
+  },
+  // {    //id-map
+  //   path:"/restaurantCard/:id",
+  //   element:<RestaurantCard />
+  // }
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<RouterProvider router={appRouter} />);
+```
+
  # Laying foundation Jsx , babel and componet  
 
 # cdnLinks_React
