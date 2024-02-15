@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from "react-dom/client";
 import Header from './FoodSwiggyAppBuild/SwiggyFoodApp/Header';
-import './FoodSwiggyAppBuild/SwiggyFoodApp/App.css'; // common css for Header and MainContent
+// import './FoodSwiggyAppBuild/SwiggyFoodApp/App.css'; // common css for Header and MainContent
 import MainContent from './FoodSwiggyAppBuild/SwiggyFoodApp/MainContent';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Footer from './FoodSwiggyAppBuild/Footer';
