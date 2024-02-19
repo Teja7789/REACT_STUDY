@@ -8,12 +8,17 @@ import Footer from './FoodSwiggyAppBuild/Footer';
 import RestaurantCard from './FoodSwiggyAppBuild/SwiggyFoodApp/RestaurantCard';
 import Courosel from './FoodSwiggyAppBuild/Courosel';
 import NotFound from './FoodSwiggyAppBuild/SwiggyFoodApp/NotFound';
+import store from './FoodSwiggyAppBuild/ReduxToolkit/store';
+import { Provider } from 'react-redux';
 
 function Index() {
   return (
-    <div>
+    <div >
+      <Provider store={store}>
+
       <Header />
-     <Outlet />
+     {/* <Outlet /> */}
+     </Provider>
     </div>
   )
 }
