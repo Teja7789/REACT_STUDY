@@ -8,7 +8,10 @@ import  {increment, incrementByAmount,clearCart}  from "../ReduxToolkit/cartSlic
 const Header = () => {
   const [toogleLoginBtn, setToogleLoginBtn] = useState("Login");
   const navigate = useNavigate();
-  const {value, amount} = useSelector(state => state.counter);
+  const {value, amount} = useSelector(state => state.counter); //best way
+
+  const valueData = useSelector(store => store.counter);
+  console.log(valueData ,"vD");
   const dispatch = useDispatch();
   console.log(value, amount,"cart");
 

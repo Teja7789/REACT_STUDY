@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import resList from "../../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
+import UserClassParent from "./UserClassParent";
+import NewReleasedMovies from "../../BookMyShow/components/NewReleasedMovies";
 const MainContent = () => {
   //   const [data , setData] = useState([]);
   //syntax
@@ -55,6 +57,11 @@ const[filteredRestaurant,setFilteredRestaurant] = useState([]);
           {" "}
           Filter Data
         </button> */}
+      </div>
+      <div>
+
+        <UserClassParent />
+        {/* <NewReleasedMovies /> */}
       </div>
       <div className="res-container">
         {filteredRestaurant.map((restaurant) => (
