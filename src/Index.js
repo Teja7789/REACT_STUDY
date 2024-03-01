@@ -17,7 +17,7 @@ function Index() {
       <Provider store={store}>
 
       <Header />
-     {/* <Outlet /> */}
+     <Outlet />
      </Provider>
     </div>
   )
