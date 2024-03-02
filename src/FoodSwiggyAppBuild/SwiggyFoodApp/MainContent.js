@@ -3,7 +3,7 @@ import resList from "../../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import UserClassParent from "./UserClassParent";
-import NewReleasedMovies from "../../BookMyShow/components/NewReleasedMovies";
+// import NewReleasedMovies from "../../BookMyShow/components/NewReleasedMovies";
 const MainContent = () => {
   //   const [data , setData] = useState([]);
   //syntax
@@ -25,10 +25,10 @@ const[filteredRestaurant,setFilteredRestaurant] = useState([]);
 
     // Optional Chaining
     setData(json?.data?.cards[0]?.card?.card?.imageGridCards?.info);
-    console.log(
-      json?.data?.cards[0]?.card?.card?.imageGridCards.info,
-      "dataApi"
-    );
+    // console.log(
+    //   json?.data?.cards[0]?.card?.card?.imageGridCards.info,
+    //   "dataApi"
+    // );
     setFilteredRestaurant(json?.data?.cards[0]?.card?.card?.imageGridCards?.info );
   };
   return data.length === 0 ? (

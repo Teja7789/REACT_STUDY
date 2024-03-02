@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HeaderMain from './HeaderMain'
 import Footer from './Footer'
 import MainContent from './MainContent'
@@ -11,7 +11,7 @@ function Main() {
     <div>
 <HeaderMain/>
       <Courosel/>
-<MainContent />
+{/* <MainContent /> */}
 
 
 <Footer/>

@@ -8,14 +8,15 @@ import Footer from './FoodSwiggyAppBuild/Footer';
 import RestaurantCard from './FoodSwiggyAppBuild/SwiggyFoodApp/RestaurantCard';
 import Courosel from './FoodSwiggyAppBuild/Courosel';
 import NotFound from './FoodSwiggyAppBuild/SwiggyFoodApp/NotFound';
+
 import store from './FoodSwiggyAppBuild/ReduxToolkit/store';
 import { Provider } from 'react-redux';
+import NewReleasedMovies from "./BookMyShow/components/NewReleasedMovies";
 
 function Index() {
   return (
     <div >
       <Provider store={store}>
-
       <Header />
      <Outlet />
      </Provider>
@@ -41,8 +42,12 @@ const appRouter = createBrowserRouter([
       {
         path:"/courosel",
         element: <Courosel />
-      }
+      },
     ]
+  },
+  {
+    path:"/moviesHome",
+    element:<NewReleasedMovies />
   },
   {
     path:"/footer",
