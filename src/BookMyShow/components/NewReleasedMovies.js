@@ -1,67 +1,47 @@
-// import React, { useEffect, useState } from 'react'
-
-// function NewReleasedMovies() {
-//     const [moviesNewList,setNewMoviesList] = useState([]);
-// useEffect(()=>{
-// fetch('https://res.cloudinary.com/in.bookmyshow.com/api/explore/v1/discover/home/hyderabad?region=HYD&scrollId=af8ccb21-0ebd-4820-b7f3-574593738253&pageId=1&lat=17.385044&lon=78.486671')
-// .then(response => response.json())
-// .then(moviesNewList => {setNewMoviesList(moviesNewList);
-// console.log(moviesNewList,"moviesNewList");
-// }
-
-// )
-// },[])
-// console.log(moviesNewList,"check");
-//   return (
-//     <div>
-//         {/* {moviesNewList} */}
-//     </div>
-//   )
-// }
-
-// export default NewReleasedMovies
-
-// import React,{ useEffect, useState } from "react"
-
-// function NewReleasedMovies() {
-//   const [users, setUsers] = useState([])
-
-//   useEffect(() => {
-//     fetch("https://in.bookmyshow.com/api/explore/v1/discover/home/hyderabad?region=HYD&scrollId=af8ccb21-0ebd-4820-b7f3-574593738253&pageId=1&lat=17.385044&lon=78.486671    ", {
-//         headers: {
-//           'x-app-code': 'your_app_code_here'
-//         }
-//       })
-//       .then(response => response.json())
-//       .then(json => setUsers(json))
-//   }, [])
-// console.log(users,"usersApi");
-//   return (
-//     <div className="App">
-
-//     </div>
-//   )
-// }
-
-// export default NewReleasedMovies
-
 import React, { useState, useEffect } from 'react';
 
-function MovieList() {
+function NewReleasedMovies() {
   const [htmlContent, setHtmlContent] = useState('');
-
   useEffect(() => {
-    fetch('https://private-anon-febdfeb1a0-moviebuffapi.apiary-mock.com/api/v2/resources/movies?limit=50&page=1')
-      .then(response => response.text())
+    
+    fetch('https://partnersite-api.ticketnew.com/PartnerServiceAPI/api/partners/Movies/gTDZRON2iXS8AGmtJI0Bfw==') 
+        // connected 
+    // fetch('https://apiproxy.paytm.com/v3/movies/search/cinemas?version=3&site_id=6&channel=HTML5&child_site_id=370&city=chennai')
+    // fetch('https://apiproxy.paytm.com/v3/movies/search/movies?version=3&site_id=6&channel=HTML5&child_site_id=370&city=chennai&mdp=1')
+      // connected 
+    
+    // .then(response => response.text()) //text
+      .then(response => response.json())
       .then(data =>{setHtmlContent(data)
     console.log(data,"dataApiUrl")
     })
       .catch(error => console.error('Error fetching data:', error));
   }, []);
+const renderData = htmlContent?.partnerMovieDTOItems?.map((movieList) => console.log(movieList,"movieList"));
 
   return (
-    <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+    // <div dangerouslySetInnerHTML={{ __html: htmlContent }} /> //text
+    <section className="text-gray-600 body-font">
+ {/* { htmlContent?.partnerMovieDTOItems?.map((data,i) =>{
+  <div className="container px-5 py-24 mx-auto" key={i}>
+      <div className="flex flex-wrap -m-4" >
+        <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a classNameName="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260" />
+          </a>
+          <div className="mt-4">
+            <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{data.MovieDescription}</h3>
+            <h2 className="text-gray-900 title-font text-lg font-medium">{data.MovieLanguage}</h2>
+            <p classNameName="mt-1">{data.MovieLength}</p>
+          </div>
+        </div>
+        </div>
+        </div>
+ } )}    */}
+ {renderData}
+        </section>
   );
 }
 
-export default MovieList;
+export default NewReleasedMovies;
+

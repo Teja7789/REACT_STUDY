@@ -19,6 +19,9 @@ export default class UserClass extends Component {
     this.setState({location: "AMP"});
 
     }
+    componentDidMount(){
+      console.log("LifeCycle" ,"3.ChildcomponentDidMount");
+    }
     
   render() {
     console.log("LifeCycle" ,"2.Childrender")
